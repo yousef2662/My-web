@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sen:wght@400..800&display=swap');
+
+:root{
+  --main-back: #1C2226;
+  --blue-color: #0080FF;
+  --secondary-back: #25282A;
+  --card-back: #1E1E1E;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: var(--main-back);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.container h1{
+  margin-bottom: 32px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+.container p{
+  margin-bottom: 32px;
+  color: rgb(234, 234, 234);
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+}
+
+.return{
+  width: 130px;
+  height: 45px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--blue-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 65.5px var(--blue-color);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: .3s;
+  margin-top: 10px;
+}
+
+.return:hover{
+  color: var(--blue-color);
+  background-color: transparent;
+  border: 2px solid var(--blue-color);
+}
+
+@media (max-width: 768px) {
+  .container h1{
+    font-size: 27px;
+  }
+
+  .container p{
+    font-size: 15px;
+  }
+}
