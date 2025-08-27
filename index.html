@@ -95,20 +95,20 @@
   <section class="conatct" id="contact">
     <div class="container">
       <h1 class="main-c">Contact <span>Me?</span></h1>
-      <form action="">
+      <form action="https://formsubmit.co/c4e11586516ae2e45de5bd95c4947f50" method="post">
         <div class="con-container">
           <div class="first-row row">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Second Name">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="second_name" placeholder="Second Name" required>
           </div>
           <div class="second-row row">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Number">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="number" placeholder="Number">
           </div>
           <div class="third-row">
-            <textarea name="" id="" placeholder="What You Want?"></textarea>
+            <textarea name="message" placeholder="What You Want?" required></textarea>
           </div>
-          <button class="send"><i class="fa-solid fa-paper-plane"></i> Send</button>
+          <button type="submit" class="send"><i class="fa-solid fa-paper-plane"></i> Send</button>
         </div>
       </form>
     </div>
