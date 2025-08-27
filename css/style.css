@@ -282,7 +282,31 @@ body{
 
 }
 
-@media (max-width: 768px & min-width: 426px) {}
+@media (max-width: 768px) and (min-width: 601px) {
+
+  .landing{
+    height: calc(50vh + 747px);
+  }
+
+  .robot{
+    width: 1000px;
+    height: 750px;
+    margin-left: 90px;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 426px) {
+
+  .landing{
+    height: calc(50vh + 722px);
+  }
+
+  .robot{
+    width: 900px;
+    height: 725px;
+    margin-left: 50px;
+  }
+}
 
 /* services */
 
