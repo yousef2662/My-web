@@ -3,14 +3,31 @@ document.addEventListener("DOMContentLoaded", async () => {
   
   let toggleMenu = document.querySelector(".fa-bars");
   let linkCon = document.querySelector(".links-con-mobile");
+  let proCards = document.querySelectorAll(".pro-card");
+  let proDescriptions = document.querySelectorAll(".pro-card .description");
+
+proCards.forEach((card, index) => {
+  card.onmouseover = () => {
+    proDescriptions[index].style.visibility = "visible";
+    proDescriptions[index].style.opacity = "1";
+  };
+
+  card.onmouseleave = () => {
+    proDescriptions[index].style.visibility = "hidden";
+    proDescriptions[index].style.opacity = "0";
+  };
+});
+
   
   toggleMenu.addEventListener("click", () => {
     if (linkCon.classList.contains("visi")){
       linkCon.style.visibility = "hidden";
+      linkCon.style.opacity = "0";
       linkCon.classList.remove("visi");
       toggleMenu.style.color = "white";
     } else {
       linkCon.style.visibility = "visible";
+      linkCon.style.opacity = "1";
       linkCon.classList.add("visi");
       toggleMenu.style.color = "var(--blue-color)";
     }
