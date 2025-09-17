@@ -216,18 +216,43 @@ body{
 
 .landing .right-section{
   overflow: hidden;
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.robot{
-  width: 900px;
-  height: 800px;
+.robot {
+  width: 350px;
+  animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
+  margin-right: 50px;
 }
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 5px cyan);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 25px cyan);
+  }
+}
+
 
 @media (max-width: 1220px) {
-  .robot{
-    width: 800px;
-    height: 750px;
-  }
   
   .landing .left-section{
     width: 550px;
@@ -239,30 +264,41 @@ body{
   .landing .container{
     flex-direction: column;
     text-align: center;
-    justify-content: flex-end;
+    justify-content: center;
+    height: unset;
   }
   
   .landing .left-section .social-links{
     justify-content: center;
   }
 
+  .landing .left-section{
+    margin-top: 40px;
+    height: calc(100vh - 170px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .landing .right-section{
+    height: unset;
+    width: unset;
+  }
+
   .landing{
-    height: calc(50vh + 940px);
+    height: unset;
   }
 
   .robot{
-    width: 1300px;
-    height: 900px;
-    margin-left: 80px;
+    margin-right: 0px;
+    margin-top: 50px;
+    margin-bottom: 10px;
   }
 
 }
 
 @media (max-width: 768px) {
-
-  .landing{
-    height: calc(50vh + 595px);
-  }
 
   .landing .left-section h2{
     font-size: 23px;
@@ -276,39 +312,19 @@ body{
     font-size: 16px;
   }
 
-  .robot{
-    width: 685px;
-    height: 598px;
-    margin-left: 40px;
-  } 
 
 }
 
-@media (max-width: 768px) and (min-width: 601px) {
 
-  .landing{
-    height: calc(50vh + 747px);
-  }
+@media (max-width: 426px){
 
   .robot{
-    width: 1000px;
-    height: 750px;
-    margin-left: 90px;
+    width: 300px;
   }
+
 }
 
-@media (max-width: 600px) and (min-width: 426px) {
 
-  .landing{
-    height: calc(50vh + 722px);
-  }
-
-  .robot{
-    width: 900px;
-    height: 725px;
-    margin-left: 50px;
-  }
-}
 
 /* services */
 
@@ -461,6 +477,22 @@ body{
       left: 50%;
       bottom: -300px;
     }
+  }
+}
+
+@media (max-width: 426px){
+
+  #services{
+    height: calc(100vh + 300px);
+  }
+
+  #services .slider{
+    height: calc(100vh + 50px);
+  }
+
+  #services .slider .card{
+    width: 270px;
+    height: 270px;
   }
 }
 
