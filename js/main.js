@@ -5,18 +5,34 @@ document.addEventListener("DOMContentLoaded", async () => {
   let linkCon = document.querySelector(".links-con-mobile");
   let proCards = document.querySelectorAll(".pro-card");
   let proDescriptions = document.querySelectorAll(".pro-card .description");
+  let srvCards = document.querySelectorAll("#services .card");
 
-proCards.forEach((card, index) => {
-  card.onmouseover = () => {
-    proDescriptions[index].style.visibility = "visible";
-    proDescriptions[index].style.opacity = "1";
-  };
 
-  card.onmouseleave = () => {
-    proDescriptions[index].style.visibility = "hidden";
-    proDescriptions[index].style.opacity = "0";
-  };
-});
+  srvCards.forEach((e) => {
+    e.onmouseover = () =>{
+      srvCards[0].style.animationPlayState = "paused";
+      srvCards[1].style.animationPlayState = "paused";
+      srvCards[2].style.animationPlayState = "paused";
+    }
+    
+    e.onmouseleave = () =>{
+      srvCards[0].style.animationPlayState = "running";
+      srvCards[1].style.animationPlayState = "running";
+      srvCards[2].style.animationPlayState = "running";
+    }
+  })
+
+  proCards.forEach((card, index) => {
+    card.onmouseover = () => {
+      proDescriptions[index].style.visibility = "visible";
+      proDescriptions[index].style.opacity = "1";
+    };
+
+    card.onmouseleave = () => {
+      proDescriptions[index].style.visibility = "hidden";
+      proDescriptions[index].style.opacity = "0";
+    };
+  });
 
   
   toggleMenu.addEventListener("click", () => {
@@ -33,3 +49,4 @@ proCards.forEach((card, index) => {
     }
   })
 })
+
