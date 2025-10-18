@@ -86,6 +86,9 @@ body{
   color: white;
   transition: .3s;
   cursor: pointer;
+  transition: all 350ms cubic-bezier(1, 0.0, 0.4, 1), color .4s;
+  border-radius: 3rem;
+  padding: 10px 18px;
 }
 
 

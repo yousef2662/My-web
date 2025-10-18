@@ -40,12 +40,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       linkCon.style.visibility = "hidden";
       linkCon.style.opacity = "0";
       linkCon.classList.remove("visi");
-      toggleMenu.style.color = "white";
+      toggleMenu.style.boxShadow = "none";
     } else {
       linkCon.style.visibility = "visible";
       linkCon.style.opacity = "1";
       linkCon.classList.add("visi");
-      toggleMenu.style.color = "var(--blue-color)";
+      toggleMenu.style.boxShadow = "inset 1px 1px 0 var(--glass-highlight), inset 0 0 5px var(--glass-highlight)";
     }
   })
 })
